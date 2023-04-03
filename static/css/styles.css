@@ -1,0 +1,17 @@
+.banner {
+    height: 300px;
+    background: url('./img/brick-wall.png');
+    /*background-color: #de9dfb;*/
+    text-align: center;
+    padding-top: 90px;
+    font-size: 2em;
+    color: white;
+}
+
+.footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:50px;   /* Height of the footer */
+   background: #de9dfb;
+}
