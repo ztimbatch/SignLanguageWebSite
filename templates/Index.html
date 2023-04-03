@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %} Sign Language {% endblock %}
+
+{% block content %}
+    <div class="card text-center">
+      <div class="card-body banner">
+        <h5 class="card-title">Sign Language Traductor</h5>
+        <p class="card-text">With this app, you can traduct a sign language with your hand into word.</p>
+      </div>
+    </div>
+    <div class="card text-center">
+      <div class="card-body">
+          <div class="container">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title">Your webcam</h5>
+                    <p><img src="{{ url_for('video') }}" width="90%"></p>
+                    <div class="card-bottom">
+                        <form action="{{ url_for('init') }}" method="POST">
+                            <button class="btn btn-primary btn-block" name="start" type="submit" value="Start">Start</button>
+                            <button class="btn btn-success btn-block" name="snap" type="submit" value="Snap">Snap</button>
+                            <button class="btn btn-danger btn-block" name="stop" type="submit" value="Stop">Stop</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col">
+                    <h5 class="card-title">Your snaped photo</h5>
+                    <p><img src="{{ url_for('snap') }}" width="90%" height="280px"></p>
+                </div>
+                <div class="col">
+                    <h5 class="card-title">Traduction in sign language</h5>
+                  <p><img src="{{ url_for('result') }}" width="90%"></p>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
